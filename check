@@ -65,11 +65,13 @@ usage()
 
 check options
     -nfs                test NFS
-    -glusterfs                test GlusterFS
+    -glusterfs          test GlusterFS
+    -ceph               test CephFS
+    -eos                test EOS
     -cifs               test CIFS
     -9p			test 9p
     -overlay		test overlay
-    -pvfs2          test PVFS2
+    -pvfs2              test PVFS2
     -tmpfs              test TMPFS
     -ubifs              test ubifs
     -l			line mode diff
@@ -266,6 +268,8 @@ while [ $# -gt 0 ]; do
 
 	-nfs)		FSTYP=nfs ;;
 	-glusterfs)	FSTYP=glusterfs ;;
+	-ceph)		FSTYP=ceph ;;
+	-eos)		FSTYP=eos ;;
 	-cifs)		FSTYP=cifs ;;
 	-9p)		FSTYP=9p ;;
 	-overlay)	FSTYP=overlay; export OVERLAY=true ;;

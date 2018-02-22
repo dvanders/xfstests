@@ -291,6 +291,9 @@ _mount_opts()
 	ceph)
 		export MOUNT_OPTIONS=$CEPHFS_MOUNT_OPTIONS
 		;;
+	eos)
+		export MOUNT_OPTIONS=$EOS_MOUNT_OPTIONS
+		;;
 	glusterfs)
 		export MOUNT_OPTIONS=$GLUSTERFS_MOUNT_OPTIONS
 		;;
@@ -339,6 +342,9 @@ _test_mount_opts()
 		;;
 	ceph)
 		export TEST_FS_MOUNT_OPTS=$CEPHFS_MOUNT_OPTIONS
+		;;
+	eos)
+		export TEST_FS_MOUNT_OPTS=$EOS_MOUNT_OPTIONS
 		;;
 	nfs)
 		export TEST_FS_MOUNT_OPTS=$NFS_MOUNT_OPTIONS
